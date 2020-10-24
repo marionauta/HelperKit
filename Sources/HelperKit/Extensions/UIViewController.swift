@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 public extension UIViewController {
@@ -6,3 +7,4 @@ public extension UIViewController {
         view.safeAreaLayoutGuide
     }
 }
+#endif
