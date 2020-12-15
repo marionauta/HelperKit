@@ -1,6 +1,6 @@
 import Foundation
 
-public extension URL {
+extension URL {
     /// Returns a URL constructed by appending the given query parameter to self.
     ///
     /// Both parameters, `name` and `value`, are used to build a `URLQueryItem`.
@@ -8,7 +8,7 @@ public extension URL {
     /// - Parameters:
     ///     - name: query item name.
     ///     - value: query item value.
-    func appendingQueryParameter(name: String, value: String?) -> URL {
+    public func appendingQueryParameter(name: String, value: String?) -> URL {
         guard var components = URLComponents(url: self, resolvingAgainstBaseURL: true) else { return self }
 
         var queryItems = components.queryItems ?? []
@@ -25,7 +25,7 @@ public extension URL {
     /// - Parameters:
     ///     - name: query item name.
     ///     - value: query item value.
-    mutating func appendQueryParameter(name: String, value: String?) {
+    public mutating func appendQueryParameter(name: String, value: String?) {
         self = appendingQueryParameter(name: name, value: value)
     }
 }

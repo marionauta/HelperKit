@@ -1,13 +1,13 @@
 #if canImport(UIKit)
 import UIKit
 
-public extension UIEdgeInsets {
+extension UIEdgeInsets {
     /// Creates an inset with the same amount on each side.
     ///
     ///     let inset = UIEdgeInsets(all: 16)
     ///
     /// - Parameter all: inset for every side.
-    init(all insets: CGFloat) {
+    public init(all insets: CGFloat) {
         self.init(top: insets, left: insets, bottom: insets, right: insets)
     }
 
@@ -20,7 +20,7 @@ public extension UIEdgeInsets {
     /// - Parameters:
     ///     - horizontal: inset for left & right sides.
     ///     - vertical: inset for top & bottom sides.
-    init(horizontal hInsets: CGFloat = .zero, vertical vInsets: CGFloat = .zero) {
+    public init(horizontal hInsets: CGFloat = .zero, vertical vInsets: CGFloat = .zero) {
         self.init(top: vInsets, left: hInsets, bottom: vInsets, right: hInsets)
     }
 }
