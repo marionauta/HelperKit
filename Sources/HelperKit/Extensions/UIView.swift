@@ -1,4 +1,4 @@
-import Foundation
+#if canImport(UIKit)
 import UIKit
 
 extension UIView {
@@ -17,3 +17,4 @@ extension UIView {
         }
     }
 }
+#endif
