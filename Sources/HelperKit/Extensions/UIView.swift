@@ -11,10 +11,13 @@ extension UIView {
     ///     view.addSubviews(view1, view2, ..., viewN)
     ///
     /// - Parameter views: The views to add as subviews
-    public func addSubviews(_ views: UIView...) {
+    @discardableResult
+    public func addSubviews(_ views: UIView...) -> UIView {
         for view in views {
-            self.addSubview(view)
+            addSubview(view)
         }
+
+        return self
     }
 }
 #endif
