@@ -22,7 +22,7 @@ extension UIView {
     ///
     /// - Parameter views: The views to add as subviews.
     @discardableResult
-    public func addSubviews(_ views: UIView...) -> UIView {
+    public func addSubviews(_ views: UIView...) -> Self {
         for view in views {
             addSubview(view)
         }
