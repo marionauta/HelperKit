@@ -8,5 +8,11 @@ extension UIViewController {
     public var safeArea: UILayoutGuide {
         view.safeAreaLayoutGuide
     }
+
+    /// Shorthand for the view controller's view readable content layout guide.
+    /// An area with a readable width within the view.
+    public var readableArea: UILayoutGuide {
+        view.readableContentGuide
+    }
 }
 #endif
