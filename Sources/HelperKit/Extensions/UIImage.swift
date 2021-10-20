@@ -13,7 +13,7 @@ extension UIImage {
     ///     - color: The color to fill the image with.
     ///     - size: The size of the resulting image. Defaults to 1x1.
     public static func from(color: UIColor, size: CGSize = .one) -> UIImage {
-        return UIGraphicsImageRenderer(size: size).image { context in
+        UIGraphicsImageRenderer(size: size).image { context in
             color.setFill()
             context.fill(.init(origin: .zero, size: size))
         }

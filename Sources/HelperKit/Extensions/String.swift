@@ -12,6 +12,6 @@ extension String {
     ///
     ///     let hi = "Hello, %@!".localized("Swift")
     public func localized(_ arguments: CVarArg...) -> String {
-        return String(format: localized, arguments: arguments)
+        String(format: localized, arguments: arguments)
     }
 }
