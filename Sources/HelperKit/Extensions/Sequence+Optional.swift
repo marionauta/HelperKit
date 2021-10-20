@@ -2,6 +2,7 @@ import Foundation
 
 extension Sequence {
     /// Unwraps and filters out `nil` elements.
+    @available(*, deprecated, message: "Use `compacted()` from swift-algorithms")
     public func filterNil<T>() -> [T] where Element == Optional<T> {
         return filter(\.isSome).map(\.unsafelyUnwrapped)
     }
