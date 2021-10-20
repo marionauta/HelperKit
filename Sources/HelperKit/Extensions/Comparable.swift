@@ -10,6 +10,6 @@ extension Comparable {
     /// - Parameter range: The range to clamp the value to.
     /// - Returns: A new value clamped to the bounds of `range`.
     public func clamped(to range: ClosedRange<Self>) -> Self {
-        return max(min(self, range.upperBound), range.lowerBound)
+        max(min(self, range.upperBound), range.lowerBound)
     }
 }
